@@ -15,7 +15,7 @@ export class DataService {
     return interval(5000).pipe(
       startWith(0),
       // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-      switchMap(() => this.http.get("https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forUsername="+name+"&key=AIzaSyAKS_5CE6GRffYeKxQv5yHwcVeHhFcrZIU")),
+      switchMap(() => this.http.get("https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forUsername="+name+"&key=yourAPIKey")),
       map(res => res)
     )
     
